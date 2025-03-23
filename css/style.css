@@ -1,0 +1,384 @@
+/* fonts */
+.p1 {
+    color: #CE9FBC;
+font-family: "Sulphur Point";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: left;
+}
+.p1{
+  
+    width: 130px;
+    
+}
+
+
+
+ h1 {
+font-family: "alfarn", sans-serif;
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+margin-top: 5rem;
+
+
+ }
+
+.h2 a,  h2{
+    text-decoration: none;
+    color:#000000;
+    font-family: "alfarn", sans-serif;
+    font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+h3 {
+font-family: Synthemesc;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ }
+
+h4{
+   color:#000000  ;
+font-family: "New Order";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+p{
+    font-family: "New Order";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.top_header a {
+    color:#CE9FBC;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: "new-order", sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: block;
+text-decoration: none;
+
+}
+
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+
+/* General */
+body {
+    background-color: #E7DABD;
+}
+
+/* Placement */
+.top_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header img {
+    max-width: 200px;
+}
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.work img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out;
+}
+
+.work img:hover {
+    filter: grayscale(0%);
+}
+
+.divider {
+    margin-top: 2rem;
+    width: 100vw; /* Ensures it fits the full screen width */
+    overflow: hidden; /* Prevents overflow */
+    display: flex; /* Ensures it aligns properly */
+    justify-content: center; /* Centers it horizontally */
+}
+
+.divider img {
+    width: 100%; /* Makes the image scale with the container */
+    height: auto; /* Maintains proportions */
+    display: block; /* Removes extra space beneath the image */
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: #3B67B8;
+    height: auto; /* Allow content to define the height */
+    padding: 2rem 0; /* Add padding for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_flex {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+footer img {
+    width: 200px;
+}
+
+.socials {
+    width: 150px;
+    text-align: left;
+}
+
+.socials a {
+    font-family: "new-order", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #E2B92B;
+}
+
+.socials a:hover {
+    color: #882C11;
+}
+
+/* About */
+.about_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.about_wrapper img {
+    width: 30%;
+}
+
+.about_text {
+    max-width: 450px;
+}
+
+/* Portfolio pages */
+.start_information {
+    margin-top: 2rem;
+    margin-left: 10%;
+    border: 10px solid #3B67B8;
+    max-width: 250px;
+    padding: 2rem;
+}
+
+.start_information p {
+    margin-bottom: 1rem;
+}
+
+.problem-solution {
+    display: flex;
+    margin: 0 auto;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 3rem;
+}
+
+.img-left {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 1rem; /* Space between image and text */
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.img-left img {
+    width: 50%;
+}
+
+.img-left .text-content {
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+.tweeluik {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+.tweeluik p {
+    margin-top: 1rem;
+}
+
+.alleentekst {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.portfolio img, .portfolio_grid img {
+    max-width: 100%;
+    cursor: pointer;
+    transition: 1s ease;
+    display: block;
+}
+
+.alleenimg {
+  width: 80%;
+  margin: 0 auto;
+}
+.alleenimg img{
+   width: 100%;
+   margin: 0 auto;
+}
+.portfolio_grid {
+    display: grid; /* Ensure it is a grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.portfolio_flex {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.portfolio_flex img {
+    width: 30%;
+}
+
+/* Wrapper */
+.imageWrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(136, 44, 17, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.imageWrapper img {
+    max-height: 95%;
+}
+
+.imageWrapper span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "New Order";
+    color:#000000;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2, .h2 a {
+        font-size: 25px;
+    }
+
+    header nav {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .work {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 1rem;
+    }
+
+    h2, .h2 a {
+        font-size: 20px;
+    }
+
+    .text-content p 
+    {
+        margin-top: 1rem;
+    }
+
+    header nav {
+        width: 80%;
+    }
+
+    .img-left {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .img-left img {
+        width: 100%;
+    }
+
+    .img-left .text-content {
+        width: 100%;
+    }
+
+
+}

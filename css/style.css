@@ -81,6 +81,19 @@ p {
     color: #3B67B8;
 }
 
+nav a.yellow {
+    color:#E2B92B;
+}
+
+
+nav a.red {
+    color:#882C11;
+}
+
+nav a.blue {
+    color:#3B67B8;
+}
+
 .top_header a {
     color: #CE9FBC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -115,6 +128,7 @@ button {
     padding-left: 1rem;
     padding-right: 1rem;
    background-color: #EDE4D1;
+   cursor: pointer;
 }
 
 
@@ -526,6 +540,25 @@ max-width: 350px;
     font-family: "New Order";
     color: #000000;
     cursor: pointer;
+}
+
+
+/* contact container */
+.contact_container{
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 /* Media Queries */

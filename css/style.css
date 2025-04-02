@@ -165,14 +165,6 @@ body {
     margin: 0 auto;
 }
 
-/* Placement */
-/* .top_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    width: 100%;
-} */
 
 header img {
     max-width: 200px;
@@ -723,6 +715,14 @@ input, textarea {
         header nav {
             width: 80%;
         }
+
+        .nav a{
+            font-size: 1rem;
+        }
+        header{
+            width: 90%;
+        }
+        
 
        
 

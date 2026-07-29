@@ -1,30 +1,47 @@
-let images = document.querySelectorAll("img");
+// Hamburger menu toggle — wait for DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    if (!hamburger || !navMenu) return;
 
-//wrapper
-let wrapper = document.getElementById('wrapper');
-
-//imgWrapper
-let imgWrapper = document.getElementById('fullImg');
-
-//close
-let close = document.querySelector('span');
-
-// Add event listener to each image
-images.forEach((img) => {
-    img.addEventListener('click', () => {
-        openModal(img.src); // Pass the image source to the openModal function
+    // Toggle menu
+    hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(!expanded));
     });
-});
 
-// Function to open the modal
-function openModal(pic) {
-    wrapper.style.display = "flex";
-    imgWrapper.src = pic;
-    pic.classList.add('no-hover'); // Add class to prevent hover effect
-}
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
 
-// Add event listener to close the modal
-close.addEventListener('click', () => {
-    wrapper.style.display = "none";
-    imgWrapper.classList.remove('no-hover'); // Remove class when modal is closed
+    // Swap portfolio images on hover
+    const hoverImages = document.querySelectorAll('.work-item img[data-hover-src]');
+    hoverImages.forEach((img) => {
+        const defaultSrc = img.getAttribute('src');
+        const hoverSrc = img.getAttribute('data-hover-src');
+
+        img.addEventListener('mouseenter', () => {
+            img.setAttribute('src', hoverSrc);
+        });
+
+        img.addEventListener('mouseleave', () => {
+            img.setAttribute('src', defaultSrc);
+        });
+
+        img.addEventListener('focus', () => {
+            img.setAttribute('src', hoverSrc);
+        });
+
+        img.addEventListener('blur', () => {
+            img.setAttribute('src', defaultSrc);
+        });
+    });
 });

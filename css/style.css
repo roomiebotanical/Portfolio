@@ -220,6 +220,38 @@ button p{
 
 
 
+.buttonbig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 2rem auto 0;
+    text-decoration: none;
+    border-radius: 24px;
+    border: 3px solid #3B67B8;
+    padding: 0.75rem 1.5rem;
+    background-color: #3B67B8;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.buttonbig:hover {
+    transform: scale(1.05);
+  
+}
+
+.buttonbig p {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+    line-height: 1.1;
+    color: #E2B92B;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
 /* General */
 body {
     background-color:#EDE4D1;
@@ -232,26 +264,81 @@ header img {
     max-width: 200px;
 }
 
-.work{
+.work {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
- width: 80%;
- margin: 0 auto;
- gap: 1rem;
- margin-top: 5rem;
- justify-content: center;
-
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-top: 5rem;
+    justify-content: center;
 }
 
 .work img {
     width: 100%;
-    height: auto; /* Keeps the aspect ratio */
-    max-width: 100%; /* Ensures images don't stretch */
+    height: auto;
+    max-width: 100%;
     margin-bottom: 1rem;
 }
 
+.work3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-top: 5rem;
+    justify-content: center;
+}
 
+.work3 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
 
+/* VERTICAL SLIDER */
+
+.verticalslider {
+    /* width: min(100%, 1100px); */
+    width: 100%;
+    margin: 3rem auto 0;
+    overflow: hidden;
+  
+}
+
+.verticalslider-track {
+
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    align-items: center;
+    animation: verticalSliderScroll 20s linear infinite;
+    will-change: transform;
+}
+
+.verticalslider-track img {
+    flex: 0 0 auto;
+    height: 280px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.verticalslider-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes verticalSliderScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 .divider1{
     margin-top: 2rem;
@@ -754,6 +841,222 @@ max-width: 350px;
     margin-top: 5rem;
 
 }
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+.experience_section {
+    width: 80%;
+    margin: 6rem auto 0;
+}
+
+.experience_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+
+/* TIMELINE */
+
+.experience_timeline {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.experience_timeline::before {
+    content: "";
+    position: absolute;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #3B67B8;
+}
+
+
+/* ITEM */
+
+.experience_item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+
+/* JAAR */
+
+.experience_year {
+    text-align: right;
+    padding-right: 1.7rem;
+    position: relative;
+}
+
+.experience_year span {
+    display: block;
+    font-family: "alfarn", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.experience_year small {
+    display: block;
+    margin-top: 0.35rem;
+    font-family: "futura-pt", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+
+/* BOLLETJE */
+
+.experience_year::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid #EDE4D1;
+}
+
+.blue_item .experience_year::after {
+    background-color: #3B67B8;
+}
+
+.red_item .experience_year::after {
+    background-color: #882C11;
+}
+
+.yellow_item .experience_year::after {
+    background-color: #E2B92B;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media only screen and (max-width: 768px) {
+
+    .experience_section,
+    .education_section {
+        width: 90%;
+        margin-top: 5rem;
+    }
+
+    .experience_title,
+    .education_title {
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    .experience_title p,
+    .education_title p {
+        margin-top: 1rem;
+    }
+
+
+    /* TIMELINE */
+
+    .experience_timeline::before {
+        left: 7px;
+        width: 3px;
+    }
+
+    .experience_item {
+        display: block;
+        padding-left: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .experience_year {
+        text-align: left;
+        padding: 0 0 0.5rem;
+    }
+
+    .experience_year span {
+        display: inline;
+        font-size: 1.3rem;
+    }
+
+    .experience_year small {
+        display: inline;
+        margin-left: 0.4rem;
+    }
+
+    .experience_year::after {
+        left: -31px;
+        right: auto;
+        top: 0;
+    }
+
+    .experience_content {
+        padding: 0;
+    }
+
+    .experience_content h2 {
+        font-size: 1.4rem;
+    }
+
+
+    /* EDUCATION */
+
+    .education_list {
+        display: block;
+    }
+
+    .education_item {
+        margin-bottom: 0.8rem;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+
+    .education_main {
+        min-height: 280px;
+    }
+
+    .education_exchange {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    .education_exchange strong {
+        display: block;
+        margin-top: 0.3rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .experience_section,
+    .education_section {
+        width: 90%;
+    }
+
+    .experience_content h2 {
+        font-size: 1.3rem;
+    }
+
+    .experience_content p {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    .education_main h2 {
+        font-size: 1.7rem;
+    }
+}
+
+
 
 input, textarea {
     width: 100%;
